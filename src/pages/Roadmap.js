@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Roadmap() {
 
   const handlePayment = () => {
     window.location.href =
-      "upi://pay?pa=sinchana@okaxis&pn=Sinchana&am=49&cu=INR";
+      "upi://pay?pa=sinchana8861001190@okicici&pn=Sinchana&am=49&cu=INR";
   };
 
   return (
@@ -20,7 +21,7 @@ function Roadmap() {
       <h3>🔍 Preview:</h3>
 
       <ul style={{ lineHeight: "1.8" }}>
-        <li>Week 1 – Python Basics (Variables, Loops, Functions)</li>
+        <li>Week 1 – Python Basic (Variables, Loops, Functions)</li>
         <li>Week 2 – OOP Concepts + Mini Projects</li>
         <li>Week 3 – DSA Practice + Problem Solving</li>
         <li>Week 4 – Real-world Project + Interview Prep</li>
@@ -43,12 +44,14 @@ function Roadmap() {
           fontSize: "16px",
         }}
       >
-        Pay ₹49 to Unlock
+        Pay ₹30 to Unlock
       </button>
 
       <p style={{ marginTop: "15px", fontSize: "14px", color: "#555" }}>
         You will be redirected to your UPI app to complete payment.
       </p>
+      <Link to="/">⬅ Back to Home</Link>
+      
     </div>
   );
 }
