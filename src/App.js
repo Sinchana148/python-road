@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Roadmap from "./pages/Roadmap";
 import Questions from "./pages/Questions";
+import RoadmapFull from "./pages/RoadmapFull";
+import QuestionsFull from "./pages/QuestionsFull";
 import "./App.css";
 
 
@@ -51,6 +53,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/questions" element={<Questions />} />
+        <Route path="/RoadmapFull" element={<RoadmapFull />} />
+        <Route path="/questions-Full" element={<QuestionsFull />} />
         
 
       </Routes>
