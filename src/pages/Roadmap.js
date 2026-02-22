@@ -22,20 +22,30 @@ function Roadmap() {
 
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>🚀 Python Developer 30-Day Roadmap</h1>
+      <h1>📘 Most Asked Python Theoretical Interview Questions</h1>
 
       {!isUnlocked ? (
         <>
-          <h3>Preview:</h3>
-          <ul>
-            <li>Week 1 – Python Basics</li>
-            <li>Week 2 – OOP Concepts</li>
-            <li>Week 3 – DSA Practice</li>
-            <li>Week 4 – Real Project</li>
-          </ul>
+          <h3>Free Preview:</h3>
 
-          <p style={{ color: "red", fontWeight: "bold" }}>
-            🔒 Full roadmap locked
+          <p><strong>1. What is Python?</strong></p>
+          <p>Explain features and why Python is widely used.</p>
+
+          <p><strong>2. What is GIL?</strong></p>
+          <p>Explain how threading works internally in Python.</p>
+
+          <p><strong>3. Mutable vs Immutable?</strong></p>
+          <p>Explain memory behavior of Python objects.</p>
+
+          <p><strong>4. Explain OOP Principles</strong></p>
+          <p>Describe Encapsulation, Abstraction, Inheritance, Polymorphism.</p>
+
+          <p><strong>5. What are Decorators?</strong></p>
+          <p>Explain how decorators modify function behavior.</p>
+
+          <p style={{ color: "red", fontWeight: "bold", marginTop: "20px" }}>
+              🔒Pay and Unlock Full Detailed Explanations & Concepts
+
           </p>
 
           <button
@@ -96,14 +106,32 @@ function Roadmap() {
         </>
       ) : (
         <>
-          <h3>🎉 Full Roadmap</h3>
-          <ul>
-            <li>Day 1–3: Variables, Loops, Conditions</li>
-            <li>Day 4–7: Functions & Modules</li>
-            <li>Week 2: OOP + Mini Projects</li>
-            <li>Week 3: 50 DSA Problems</li>
-            <li>Week 4: Real Project + Interview Prep</li>
-          </ul>
+          <h3>🎉 Full Interview Theory Answers</h3>
+
+          <p><strong>1. What is Python?</strong></p>
+          <p>Python is a high-level, interpreted, dynamically typed programming language known for its readability and simplicity. It supports multiple programming paradigms including object-oriented, procedural, and functional programming.</p>
+
+          <p><strong>2. What is GIL?</strong></p>
+          <p>The Global Interpreter Lock allows only one thread to execute Python bytecode at a time in CPython. It ensures memory safety but limits true parallelism in CPU-bound tasks.</p>
+
+          <p><strong>3. Mutable vs Immutable</strong></p>
+          <p>Mutable objects like list and dictionary can be modified after creation. Immutable objects like string and tuple cannot be changed once created, which makes them memory efficient and thread safe.</p>
+
+          <p><strong>4. OOP Principles</strong></p>
+          <p>Encapsulation binds data and methods together. Abstraction hides implementation details. Inheritance allows reuse of code. Polymorphism enables methods to behave differently based on objects.</p>
+
+          <p><strong>5. Decorators</strong></p>
+          <p>A decorator is a function that modifies another function without changing its code. It is commonly used for logging, authentication, and performance tracking.</p>
+
+          <p><strong>6. Generators</strong></p>
+          <p>Generators use the yield keyword to return values one at a time, reducing memory usage for large datasets.</p>
+
+          <p><strong>7. Exception Handling</strong></p>
+          <p>Exception handling in Python uses try, except, else, and finally blocks to handle runtime errors gracefully.</p>
+
+          <p><strong>8. List vs Tuple</strong></p>
+          <p>Lists are mutable and slower. Tuples are immutable and faster due to fixed memory allocation.</p>
+
         </>
       )}
 

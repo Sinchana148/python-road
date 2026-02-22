@@ -22,20 +22,30 @@ function Questions() {
 
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>💡 Python Interview Questions</h1>
+      <h1>💻 Most Asked Python Coding Interview Questions</h1>
 
       {!isUnlocked ? (
         <>
-          <h3>Preview:</h3>
-          <ul>
-            <li>What is GIL?</li>
-            <li>List vs Tuple</li>
-            <li>Decorators</li>
-            <li>OOP Concepts</li>
-          </ul>
+          <h3>Free Preview:</h3>
 
-          <p style={{ color: "red", fontWeight: "bold" }}>
-            🔒 Full 100+ Questions locked
+          <p><strong>1. Reverse a String</strong></p>
+          <p>Rearrange the characters of a string from last to first.</p>
+
+          <p><strong>2. Check Palindrome</strong></p>
+          <p>Determine whether a string reads the same forward and backward.</p>
+
+          <p><strong>3. Find Second Largest Number</strong></p>
+          <p>Identify the second highest element in a list without using shortcuts.</p>
+
+          <p><strong>4. Prime Number Check</strong></p>
+          <p>Check whether a number is divisible only by 1 and itself.</p>
+
+          <p><strong>5. Remove Duplicates from List</strong></p>
+          <p>Return only unique elements from a list.</p>
+
+          <p style={{ color: "red", fontWeight: "bold", marginTop: "20px" }}>
+            🔒 Pay and Unlock Full Detailed Explanations & Concepts
+
           </p>
 
           <button
@@ -96,13 +106,32 @@ function Questions() {
         </>
       ) : (
         <>
-          <h3>🎉 Full Interview Questions</h3>
-          <ul>
-            <li>Explain Python memory management</li>
-            <li>Explain multithreading</li>
-            <li>Explain asyncio</li>
-            <li>Explain metaclasses</li>
-          </ul>
+          <h3>🎉 Full Coding Interview Concepts</h3>
+
+          <p><strong>1. Reverse a String – Concept</strong></p>
+          <p>Reversing a string means rearranging characters from the last position to the first. This can be achieved using slicing, loops, or built-in functions.</p>
+
+          <p><strong>2. Palindrome Check – Concept</strong></p>
+          <p>A palindrome reads the same forward and backward. The logic compares the original string with its reversed version.</p>
+
+          <p><strong>3. Remove Duplicates – Concept</strong></p>
+          <p>Identify repeated elements and keep only unique values using iteration or sets.</p>
+
+          <p><strong>4. Second Largest Number – Concept</strong></p>
+          <p>Traverse or sort elements carefully to find the second highest value.</p>
+
+          <p><strong>5. Prime Number – Concept</strong></p>
+          <p>Check divisibility from 2 to square root of the number.</p>
+
+          <p><strong>6. Fibonacci Series – Concept</strong></p>
+          <p>Each number is the sum of the previous two numbers. Can be solved using loops or recursion.</p>
+
+          <p><strong>7. Two Sum – Concept</strong></p>
+          <p>Find two numbers that add up to a target using indexing or hashing.</p>
+
+          <p><strong>8. Sorting Algorithms – Concept</strong></p>
+          <p>Arrange elements in ascending or descending order using bubble sort, selection sort, or insertion sort.</p>
+
         </>
       )}
 
