@@ -2,56 +2,61 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Roadmap() {
+  const isPaid = localStorage.getItem("isPaid") === "true";
 
   const handlePayment = () => {
-    window.location.href =
-      "upi://pay?pa=sinchana8861001190@okicici&pn=Sinchana&am=49&cu=INR";
+    window.location.href = "https://imjo.in/5Ude7d";
   };
 
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
       <h1>🚀 Python Developer 30-Day Roadmap</h1>
 
-      <p style={{ marginTop: "10px", fontSize: "16px" }}>
-        Become a job-ready Python Developer in 30 days.
-      </p>
+      {!isPaid ? (
+        <>
+          <h3>Preview:</h3>
+          <ul>
+            <li>Week 1 – Python Basics</li>
+            <li>Week 2 – OOP Concepts</li>
+            <li>Week 3 – DSA Practice</li>
+            <li>Week 4 – Real Project</li>
+          </ul>
 
-      <hr style={{ margin: "20px 0" }} />
+          <p style={{ color: "red", fontWeight: "bold" }}>
+            🔒 Full detailed roadmap locked
+          </p>
 
-      <h3>🔍 Preview:</h3>
+          <button
+  onClick={handlePayment}
+  style={{
+    padding: "14px 30px",
+    backgroundColor: "#28a745",
+    color: "white",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    marginTop: "25px",
+    fontSize: "16px",
+  }}
+>
+  Pay ₹49 to Unlock
+</button>
+        </>
+      ) : (
+        <>
+          <h3>🎉 Full Roadmap</h3>
+          <ul>
+            <li>Day 1–3: Variables, Data Types, Loops</li>
+            <li>Day 4–7: Functions, Modules</li>
+            <li>Week 2: OOP + Mini Projects</li>
+            <li>Week 3: DSA + 50 Problems</li>
+            <li>Week 4: Full Stack Project + Interview Prep</li>
+          </ul>
+        </>
+      )}
 
-      <ul style={{ lineHeight: "1.8" }}>
-        <li>Week 1 – Python Basic (Variables, Loops, Functions)</li>
-        <li>Week 2 – OOP Concepts + Mini Projects</li>
-        <li>Week 3 – DSA Practice + Problem Solving</li>
-        <li>Week 4 – Real-world Project + Interview Prep</li>
-      </ul>
-
-      <p style={{ marginTop: "20px", fontWeight: "bold", color: "red" }}>
-        🔒 Full detailed roadmap is locked.
-      </p>
-
-      <button
-        onClick={handlePayment}
-        style={{
-          padding: "14px 30px",
-          backgroundColor: "#28a745",
-          color: "white",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-          marginTop: "25px",
-          fontSize: "16px",
-        }}
-      >
-        Pay ₹30 to Unlock
-      </button>
-
-      <p style={{ marginTop: "15px", fontSize: "14px", color: "#555" }}>
-        You will be redirected to your UPI app to complete payment.
-      </p>
+      <br />
       <Link to="/">⬅ Back to Home</Link>
-      
     </div>
   );
 }
