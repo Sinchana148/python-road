@@ -15,7 +15,7 @@ function Home() {
       <section className="hero">
         <h1>Hello!🚀 Python Developer!!</h1>
         <p>
-          Crack Python interviews with a structured roadmap and real
+          Crack Python interviews with a structured and real
           interview questions.
         </p>
       </section>
@@ -27,14 +27,14 @@ function Home() {
 
           <Link to="/roadmap" className="card-link">
             <div className="card">
-              <h3>📅 30-Day Structured Plan</h3>
-              <p>Click to access full roadmap</p>
+              <h3>📅 Most asked interview questions</h3>
+              <p>Click to access full content</p>
             </div>
           </Link>
 
           <Link to="/questions" className="card-link">
             <div className="card">
-              <h3>💡 Most Asked Interview Questions(coding and theoritical)</h3>
+              <h3>💡Coding questions to practice!</h3>
               <p>Click to access full questions</p>
             </div>
           </Link>
