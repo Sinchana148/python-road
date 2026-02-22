@@ -58,7 +58,7 @@ function Questions() {
           </p>
 
           <a
-            href="https://forms.gle/FT7H1Eis4n7TfRoQ8"
+            href="https://forms.gle/MGYZq1iUXfbk5of79"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "blue", fontWeight: "bold" }}
