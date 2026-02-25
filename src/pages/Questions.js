@@ -17,7 +17,7 @@ function Questions() {
 
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>💻 Most Asked Python Coding Interview Questions</h1>
+      <h1>💻 Python Coding Questions To Practice</h1>
 
       {!isUnlocked ? (
         <>
@@ -112,7 +112,7 @@ print(reverse_string(text))`}
           </pre>
 
           <p style={{ marginTop: "20px", fontWeight: "bold", color: "red" }}>
-            🔐 Unlock to access more complete interview programs with detailed explanations.
+            🔐 Unlock to access more complete Python programs with detailed explanations.
           </p>
 
           <input
