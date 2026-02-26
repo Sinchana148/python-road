@@ -505,6 +505,258 @@ print(find_min(numbers))`}
 
 print(is_leap_year(2024))`}
 </pre>
+<hr />
+
+<p><strong>2️⃣1️⃣ QUESTION: Find Missing Number in Array</strong></p>
+<p>Find the missing number from 1 to n in a given list.</p>
+
+<pre>
+{`def find_missing(nums, n):
+    expected_sum = n * (n + 1) // 2
+    actual_sum = sum(nums)
+    return expected_sum - actual_sum
+
+
+nums = [1, 2, 4, 5]
+print(find_missing(nums, 5))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣2️⃣ QUESTION: Move Zeros to End</strong></p>
+<p>Move all zeros in the list to the end while maintaining order.</p>
+
+<pre>
+{`def move_zeros(nums):
+    result = []
+    zero_count = 0
+
+    for num in nums:
+        if num == 0:
+            zero_count += 1
+        else:
+            result.append(num)
+
+    result.extend([0] * zero_count)
+    return result
+
+
+print(move_zeros([0, 1, 0, 3, 12]))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣3️⃣ QUESTION: Find Intersection of Two Lists</strong></p>
+
+<pre>
+{`def intersection(list1, list2):
+    return list(set(list1) & set(list2))
+
+
+print(intersection([1, 2, 3, 4], [3, 4, 5, 6]))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣4️⃣ QUESTION: Check Perfect Number</strong></p>
+
+<pre>
+{`def is_perfect(n):
+    total = 0
+
+    for i in range(1, n):
+        if n % i == 0:
+            total += i
+
+    return total == n
+
+
+print(is_perfect(28))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣5️⃣ QUESTION: Rotate List by K Positions</strong></p>
+
+<pre>
+{`def rotate_list(nums, k):
+    k = k % len(nums)
+    return nums[-k:] + nums[:-k]
+
+
+print(rotate_list([1, 2, 3, 4, 5], 2))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣6️⃣ QUESTION: Find First Non-Repeating Character</strong></p>
+
+<pre>
+{`def first_non_repeating(s):
+    for char in s:
+        if s.count(char) == 1:
+            return char
+    return None
+
+
+print(first_non_repeating("aabbcddee"))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣7️⃣ QUESTION: Merge Two Sorted Lists</strong></p>
+
+<pre>
+{`def merge_sorted(list1, list2):
+    i = j = 0
+    result = []
+
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            result.append(list1[i])
+            i += 1
+        else:
+            result.append(list2[j])
+            j += 1
+
+    result.extend(list1[i:])
+    result.extend(list2[j:])
+
+    return result
+
+
+print(merge_sorted([1, 3, 5], [2, 4, 6]))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣8️⃣ QUESTION: Count Frequency of Elements</strong></p>
+
+<pre>
+{`def count_frequency(nums):
+    freq = {}
+
+    for num in nums:
+        if num in freq:
+            freq[num] += 1
+        else:
+            freq[num] = 1
+
+    return freq
+
+
+print(count_frequency([1, 2, 2, 3, 3, 3]))`}
+</pre>
+
+<hr />
+
+<p><strong>2️⃣9️⃣ QUESTION: Longest Common Prefix</strong></p>
+
+<pre>
+{`def longest_common_prefix(strs):
+    if not strs:
+        return ""
+
+    prefix = strs[0]
+
+    for s in strs[1:]:
+        while not s.startswith(prefix):
+            prefix = prefix[:-1]
+
+    return prefix
+
+
+print(longest_common_prefix(["flower", "flow", "flight"]))`}
+</pre>
+
+<hr />
+
+<p><strong>3️⃣0️⃣ QUESTION: Check Substring</strong></p>
+
+<pre>
+{`def is_substring(s, sub):
+    return sub in s
+
+
+print(is_substring("Python Programming", "Program"))`}
+</pre>
+
+<hr />
+
+<p><strong>3️⃣1️⃣ QUESTION: Find Length of Longest Word</strong></p>
+
+<pre>
+{`def longest_word_length(sentence):
+    words = sentence.split()
+    max_length = 0
+
+    for word in words:
+        if len(word) > max_length:
+            max_length = len(word)
+
+    return max_length
+
+
+print(longest_word_length("Python is very powerful language"))`}
+</pre>
+
+<hr />
+
+<p><strong>3️⃣2️⃣ QUESTION: Sort Dictionary by Values</strong></p>
+
+<pre>
+{`def sort_dict_by_value(d):
+    return dict(sorted(d.items(), key=lambda x: x[1]))
+
+
+data = {"a": 3, "b": 1, "c": 2}
+print(sort_dict_by_value(data))`}
+</pre>
+
+<hr />
+
+<p><strong>3️⃣3️⃣ QUESTION: Remove All Spaces from String</strong></p>
+
+<pre>
+{`def remove_spaces(s):
+    return s.replace(" ", "")
+
+
+print(remove_spaces("Python is powerful"))`}
+</pre>
+
+<hr />
+
+<p><strong>3️⃣4️⃣ QUESTION: Find Duplicate Elements in List</strong></p>
+
+<pre>
+{`def find_duplicates(nums):
+    seen = set()
+    duplicates = set()
+
+    for num in nums:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+
+    return list(duplicates)
+
+
+print(find_duplicates([1, 2, 3, 2, 4, 5, 1]))`}
+</pre>
+
+<hr />
+
+<p><strong>3️⃣5️⃣ QUESTION: Convert Decimal to Binary</strong></p>
+
+<pre>
+{`def decimal_to_binary(n):
+    return bin(n)[2:]
+
+
+print(decimal_to_binary(10))`}
+</pre>
         </>
       )}
 
