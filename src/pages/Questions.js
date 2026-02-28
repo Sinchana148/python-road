@@ -6,6 +6,10 @@ function Questions() {
   const [isUnlocked, setIsUnlocked] = useState(false);
 
   const correctPassword = "PYTHON49";
+  const handlePayment = () => {
+    window.location.href =
+  "upi://pay?pa=sinchanapoojary102004@okhdfcbank&pn=Sinchana&am=49&cu=INR";
+ };
 
   const handleUnlock = () => {
     if (password === correctPassword) {
@@ -113,6 +117,39 @@ print(reverse_string(text))`}
 
           <p style={{ marginTop: "20px", fontWeight: "bold", color: "red" }}>
             🔐 Unlock to access more complete Python programs with detailed explanations.
+          </p>
+         {/* ✅ ADDED PAYMENT BUTTON */}
+          <button
+            onClick={handlePayment}
+            style={{
+              padding: "12px 25px",
+              backgroundColor: "#28a745",
+              color: "white",
+              border: "none",
+              borderRadius: "5px",
+              marginTop: "20px",
+              cursor: "pointer"
+            }}
+          >
+            Pay ₹49 via UPI
+          </button>
+
+          {/* ✅ ADDED GOOGLE FORM CONFIRMATION */}
+          <p style={{ marginTop: "20px" }}>
+            After payment, submit confirmation:
+          </p>
+
+          <a
+            href="https://forms.gle/MGYZq1iUXfbk5of79"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "blue", fontWeight: "bold" }}
+          >
+            👉 Submit Payment Confirmation Form
+          </a>
+
+          <p style={{ marginTop: "20px" }}>
+            After verification, you will receive the password.
           </p>
 
           <input
