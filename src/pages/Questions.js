@@ -8,7 +8,7 @@ function Questions() {
   const correctPassword = "PYTHON49";
   const handlePayment = () => {
     window.location.href =
-  "upi://pay?pa=sinchanapoojary102004@okhdfcbank&pn=Sinchana&am=49&cu=INR";
+  "upi://pay?pa=sinchanapoojary102004@okhdfcbank&pn=Sinchana&am=30&cu=INR";
  };
 
   const handleUnlock = () => {
@@ -131,7 +131,7 @@ print(reverse_string(text))`}
               cursor: "pointer"
             }}
           >
-            Pay ₹49 via UPI
+            Pay ₹30 via UPI
           </button>
 
           {/* ✅ ADDED GOOGLE FORM CONFIRMATION */}
